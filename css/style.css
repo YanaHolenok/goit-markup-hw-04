@@ -172,11 +172,6 @@ address {
   color: var(--second-color);
   background-color: var(--primary-text-color);
 }
-.hero {
-  text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
 
 .hero-title {
   width: 670px;
@@ -210,15 +205,20 @@ address {
 }
 
 .hero {
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url('../images/hero-bg.jpg'),
-    linear-gradient(to right, rgba(196, 196, 196, 1), rgba(196, 196, 196, 1));
+  background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: var(--primary-text-color);
 }
 
 /* Section 2***************************************/
@@ -342,7 +342,8 @@ address {
   width: calc((100%-30px) / 4);
 }
 
-.team-soc-link:hover {
+.team-soc-link:hover,
+.team-soc-link:focus {
   background-color: var(--accent-color);
   color: var(--third-color);
 }
@@ -367,32 +368,25 @@ address {
   display: flex;
   gap: 30px;
 }
-.client-item {
+.client-soc-link {
   display: flex;
   margin: auto;
   align-items: center;
   justify-content: center;
   height: 92px;
-  width: calc((100%-150px) / 6);
   border: 1px solid rgba(175, 177, 184, 1);
   border-radius: 4px;
-}
-
-.client-soc-link {
+  width: 170px;
   color: var(--icon-color);
-  width: 106px;
-  height: 60px;
 }
 .client-soc-icon {
   fill: currentColor;
+  width: 106px;
+  height: 60px;
 }
-
-.client-item:hover {
-  border: 1px solid var(--accent-color);
-}
-
-.client-soc-link:hover {
-  background-color: var(--third-color);
+.client-soc-link:hover,
+.client-soc-link:focus {
+  border-color: var(--accent-color);
   color: var(--accent-color);
 }
 /* footer soc link */
